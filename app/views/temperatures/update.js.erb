@@ -3,3 +3,4 @@ $('input').val("");
 
 $('#exampleModal').modal('hide');
 $('.tables').html("<%= escape_javascript(render 'homes/table', users: @users) %>");
+$('#errors').html("<%= escape_javascript(render 'shared/error') %>");

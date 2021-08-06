@@ -16,7 +16,11 @@ class TemperaturesController < ApplicationController
     @users = User.all 
     @user = User.find_by(id: params[:id])
     @temp = @user.temperatures.first
-    @temp.update(temperature_params)
+    if @temp.update(temperature_params)
+
+    else
+      flash.now[:danger] = "体温を入力してください"
+    end
        
   end
   
