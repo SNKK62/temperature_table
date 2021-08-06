@@ -1,0 +1,16 @@
+current directory: /Users/kokiseno/ruby/environment/the_temperature_table/vendor/bundle/ruby/2.6.0/gems/aliyun-sdk-0.8.0/ext/crcx
+/Users/kokiseno/.rbenv/versions/2.6.3/bin/ruby -I /Users/kokiseno/.rbenv/versions/2.6.3/lib/ruby/site_ruby/2.6.0 -r ./siteconf20210804-3289-1brgind.rb extconf.rb
+creating Makefile
+
+current directory: /Users/kokiseno/ruby/environment/the_temperature_table/vendor/bundle/ruby/2.6.0/gems/aliyun-sdk-0.8.0/ext/crcx
+make DESTDIR\= clean
+
+current directory: /Users/kokiseno/ruby/environment/the_temperature_table/vendor/bundle/ruby/2.6.0/gems/aliyun-sdk-0.8.0/ext/crcx
+make DESTDIR\=
+compiling crc64_ecma.c
+compiling crcx.c
+linking shared-object aliyun/crcx.bundle
+
+current directory: /Users/kokiseno/ruby/environment/the_temperature_table/vendor/bundle/ruby/2.6.0/gems/aliyun-sdk-0.8.0/ext/crcx
+make DESTDIR\= install
+/usr/local/bin/ginstall -c -m 0755 crcx.bundle ./.gem.20210804-3289-1cxlbny/aliyun

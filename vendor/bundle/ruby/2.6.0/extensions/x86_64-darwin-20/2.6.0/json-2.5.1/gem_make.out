@@ -1,0 +1,13 @@
+current directory: /Users/kokiseno/ruby/environment/the_temperature_table/vendor/bundle/ruby/2.6.0/gems/json-2.5.1/ext/json
+/Users/kokiseno/.rbenv/versions/2.6.3/bin/ruby -I /Users/kokiseno/.rbenv/versions/2.6.3/lib/ruby/site_ruby/2.6.0 -r ./siteconf20210804-3289-h44zvg.rb extconf.rb
+creating Makefile
+
+current directory: /Users/kokiseno/ruby/environment/the_temperature_table/vendor/bundle/ruby/2.6.0/gems/json-2.5.1/ext/json
+make DESTDIR\= clean
+
+current directory: /Users/kokiseno/ruby/environment/the_temperature_table/vendor/bundle/ruby/2.6.0/gems/json-2.5.1/ext/json
+make DESTDIR\=
+make: Nothing to be done for `all'.
+
+current directory: /Users/kokiseno/ruby/environment/the_temperature_table/vendor/bundle/ruby/2.6.0/gems/json-2.5.1/ext/json
+make DESTDIR\= install

@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+35.times do |n|
+    User.create()
+end
+
+users = User.all
+
+Temperature.add_temps

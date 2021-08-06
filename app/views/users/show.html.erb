@@ -1,0 +1,23 @@
+<h1 class="mx-5 mt-5"><%= @user.id %></h1>
+<div class="mt-5 position-absolute top-0 end-0">
+  <a href="/"> 体温表を見る </a>
+</div>
+
+<table class="table col-md-5">
+  <thead>
+    <tr>
+      <th scope="col">日付</th>
+      <th scope="col">体温</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <% @temps.each do |temp| %>
+        <tr>
+            <th scope="row"><%= temp.created_at.strftime('%m/%d') %></th>
+            <td><%= temp.num %></td>
+        </tr>
+    <%end%>
+    
+  </tbody>
+</table>

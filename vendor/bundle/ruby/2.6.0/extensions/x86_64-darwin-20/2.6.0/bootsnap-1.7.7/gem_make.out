@@ -1,0 +1,15 @@
+current directory: /Users/kokiseno/ruby/environment/the_temperature_table/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.7.7/ext/bootsnap
+/Users/kokiseno/.rbenv/versions/2.6.3/bin/ruby -I /Users/kokiseno/.rbenv/versions/2.6.3/lib/ruby/site_ruby/2.6.0 -r ./siteconf20210804-49134-pt6uan.rb extconf.rb
+creating Makefile
+
+current directory: /Users/kokiseno/ruby/environment/the_temperature_table/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.7.7/ext/bootsnap
+make DESTDIR\= clean
+
+current directory: /Users/kokiseno/ruby/environment/the_temperature_table/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.7.7/ext/bootsnap
+make DESTDIR\=
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.bundle
+
+current directory: /Users/kokiseno/ruby/environment/the_temperature_table/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.7.7/ext/bootsnap
+make DESTDIR\= install
+/usr/local/bin/ginstall -c -m 0755 bootsnap.bundle ./.gem.20210804-49134-1i396wj/bootsnap
