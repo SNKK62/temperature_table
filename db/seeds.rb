@@ -6,10 +6,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-35.times do |n|
-    User.create()
-end
+# Group.create(name: '管理人',password: '',password_confirmation: 'password')
+# group = Group.first
+# 35.times do |n|
+#     group.users.create(name: 'keiotaro')
+# end
 
-users = User.all
 
-Temperature.add_temps
+# Temperature.add_temps

@@ -1,0 +1,38 @@
+
+<%= render 'share/error'  %>
+
+
+
+<div class="my-auto mx-auto center-block text-center " style = "width:300px;">
+
+<strong><h1 class="text-center" style="font-size: 30px;" >プロフィールの変更</h1></strong>
+
+
+<button class="mt-5 mb-2 btn btn-primary" style="background-color: black;">
+  <%= link_to "体温表に戻る", group_path(@group), style: "color: white; text-decoration: none;" %>
+</button>
+
+<div class="row">
+  <div class=" col-md-offset-3">
+    <%= form_for(@group) do |f| %>
+      <%= render 'share/error_messages' ,object: @group %>
+
+      <%= f.label :新しい名前 %>
+      <%= f.text_field :name, class: 'form-control',style: "visiblity: hidden;", value: nil %>
+
+      <%= f.label :新しいパスワード %>
+      <%= f.password_field :password, class: 'form-control', value: @default ,placeholder: "入力は不要" %>
+
+      <%= f.label :新しいパスワードの確認 %>
+      <%= f.password_field :password_confirmation, class: 'form-control', value: "", placeholder: 'パスワードを更新する場合入力' %>
+
+      <%= f.submit "変更を保存する", class: "btn btn-primary my-5" %>
+      <div id="edittable">
+        <%= render 'edit_table', users: @users %>
+      </div>
+      
+    <% end %>
+
+  </div>
+</div>
+</div>

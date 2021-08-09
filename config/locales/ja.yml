@@ -1,0 +1,10 @@
+ja:
+  activerecord:
+    attributes:
+      user:
+        name: 名前
+      
+      group:
+        name: 団体名
+        password: パスワード
+        password_confirmation: パスワードの確認

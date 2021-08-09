@@ -1,0 +1,16 @@
+
+
+<div class="row position-absolute top-50 start-50 translate-middle">
+<h1 class="text-center" style="font-size: 25px;">メンバー名の変更</h1>
+  <div class=" col-md-offset-3 text-center ">
+    <%= form_for(@user) do |f| %>
+      <%= render 'share/error_messages' ,object: @user%>
+
+      <strong><%= f.label :新しい名前 %></strong>
+      <%= f.text_field :name, class: 'form-control my-3' ,value: ""%>
+
+      <%= f.submit "変更する", class: "btn btn-primary my-3" %>
+    <% end %>
+
+  </div>
+</div>

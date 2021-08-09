@@ -1,0 +1,26 @@
+<%= render 'share/error' %>
+
+<div class="position-absolute top-50 start-50 translate-middle " style="width: 300px;" >
+
+
+    <h1 class="text-center ">Sign up</h1>
+
+
+<div class="row mx-auto">
+  <div class="text-center ">
+    <%= form_for(@group) do |f| %>
+    <%= render 'share/error_messages' , object: @group %>
+      <%= f.label :団体名 %>
+      <%= f.text_field :name , class: 'my-3 form-control',value: ""%>
+
+      <%= f.label :パスワード %>
+      <%= f.password_field :password , class: 'my-3 form-control', value: ""%>
+
+      <%= f.label :パスワードの確認 %>
+      <%= f.password_field :password_confirmation , class: 'my-3 form-control', value: ""%>
+
+      <%= f.submit "アカウントを作成する", class: "mt-2 mx-auto btn btn-primary", style: "width: 200px;" %>
+    <% end %>
+  </div>
+</div>
+</div>

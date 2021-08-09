@@ -1,0 +1,21 @@
+
+<table class="temps-table text-center table table-bordered border-primary col-md-5  top-40 w-50 mx-auto my-5"  style="border: black;">
+
+  <thead>
+    <tr>
+      <th scope="col　">名前</th>
+      <th scope="col">体温</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <% users.each do |user| %>
+        <tr>
+        <th scope="row"><%=link_to user.name, user_path(user) ,style: "text-decoration: none; color:black;"%></th>
+        <td><%= user.temperatures.first.num %></td>
+        </tr>
+    <% end %>
+    
+  </tbody>
+</table>
+

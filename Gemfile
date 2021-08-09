@@ -8,7 +8,9 @@ gem 'sprockets-rails'
 
 gem 'faker'
 gem 'whenever', require: false
-gem 'gon'
+
+gem 'rails-i18n'
+
 # gem 'carrierwave'
 
 # gem 'mini_magick'

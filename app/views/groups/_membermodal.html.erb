@@ -1,0 +1,18 @@
+<!-- Modal -->
+<div class="modal fade text-center" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class=" text-center modal-title" id="exampleModalLabel">メンバー追加</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      
+     <%= form_for(user, remote: true) do |f| %>
+        <%= f.label :name ,class: "my-3"%>
+        <%= f.text_field :name ,class: "my-3",value: ""%>
+
+        <%= f.submit "追加", class: "mt-2 btn btn-primary button", style: "width: auto;" %>
+      <% end %>
+    </div>
+  </div>
+</div>

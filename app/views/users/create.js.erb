@@ -1,0 +1,10 @@
+$('input').val("");
+
+$('body').removeClass('modal-open');
+$('.modal-backdrop').remove();
+$('#exampleModal2').modal('hide');
+$('.tables').html("<%= escape_javascript(render 'groups/table', users: @users) %>");
+$('#errors').html("<%= escape_javascript(render 'share/error') %>");
+
+$('#member').html("<%= escape_javascript(render 'groups/membermodal',user: @newuser) %>");
+$('#temp').html("<%= escape_javascript(render 'groups/tempmodal',users: @users) %>");
