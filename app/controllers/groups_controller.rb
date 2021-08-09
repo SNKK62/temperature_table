@@ -5,7 +5,7 @@ class GroupsController < ApplicationController
 
   def index
     if logged_in? 
-       correct_group
+       
        redirect_to group_path(current_group) 
     else
        redirect_to new_group_path
