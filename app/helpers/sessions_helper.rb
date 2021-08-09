@@ -5,7 +5,7 @@ module SessionsHelper
 
     def remember(group)
       group.remember
-      cookies.permanent_signed[:group_id] = group.id
+      cookies.permanent.signed[:group_id] = group.id
       cookies.permanent[:remember_token] = group.remember_token
     end
 
