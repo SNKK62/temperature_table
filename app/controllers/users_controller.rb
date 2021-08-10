@@ -24,7 +24,6 @@ class UsersController < ApplicationController
     if !@users.find_by(user_params)
       @user = @group.users.new(user_params) 
       if  @user.save
-        flash.now[:success] = @users.find_by(user_params)
         @user.temperatures.create(num: "未記入")
       else
         @users = @users.take(@users.count)

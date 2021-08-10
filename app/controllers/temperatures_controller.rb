@@ -15,7 +15,7 @@ class TemperaturesController < ApplicationController
   def update
     @group = current_group
     @users = @group.users
-    @user = User.where(group_id: current_group.id, name: params[:name])
+    @user = User.where(group_id: current_group.id, id: params[:id])
     @newuser = User.new
     if @user.empty?
       flash.now[:danger] = "そのメンバーは存在しません"

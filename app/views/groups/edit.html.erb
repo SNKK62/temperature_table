@@ -2,8 +2,11 @@
 <%= render 'share/error'  %>
 
 
+<%= link_to "アカウントを削除", current_group, method: :delete,
+                                  data: { confirm: "本当に削除しますか？" } ,class:"nav-link active mx-3 delete-account float-end " %>
 
 <div class="my-auto mx-auto center-block text-center " style = "width:300px;">
+
 
 <strong><h1 class="text-center" style="font-size: 30px;" >プロフィールの変更</h1></strong>
 
@@ -18,7 +21,7 @@
       <%= render 'share/error_messages' ,object: @group %>
 
       <%= f.label :新しい名前 %>
-      <%= f.text_field :name, class: 'form-control',style: "visiblity: hidden;", value: nil %>
+      <%= f.text_field :name, class: 'form-control',style: "visiblity: hidden;", value: nil,placeholder: "新しい名前" %>
 
       <%= f.label :新しいパスワード %>
       <%= f.password_field :password, class: 'form-control', value: @default ,placeholder: "入力は不要" %>

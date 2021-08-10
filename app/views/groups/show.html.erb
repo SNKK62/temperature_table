@@ -9,7 +9,10 @@
 
 <% if @group.id == 1 %>
       <%= form_tag('/updatingall', method: :post ) do %>
-            <%= submit_tag "データベースの追加", class: "btn btn-primary button" ,id: "godfather"%>
+      <div class="text-center">
+        <%= submit_tag "データベースの追加", class: "btn btn-primary button float-center" ,id: "godfather"%>
+      </div>
+            
       <%end%>
 <%end%>
 

@@ -9,7 +9,7 @@
       
     <% usernames = [['名前を選択','']] %>
     <% users.each do |user|  %>
-    <% usernames.push([user.name,user.name]) %>
+    <% usernames.push([user.name,user.id]) %>
     <%end%>
 
       <%= form_tag('/', method: :post,remote: true ) do %>
@@ -17,7 +17,7 @@
       <div class="modal-body ">
         <div class="form-group">
           <%= label_tag :名前 %>
-          <%= select_tag :name ,options_for_select(usernames)%>
+          <%= select_tag :id ,options_for_select(usernames)%>
         </div>
         <div class="form-group">
           <%= label_tag :体温 %>

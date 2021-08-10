@@ -1,6 +1,12 @@
 <h1 class="mx-5 mt-5"><%= @user.name %></h1>
-<%= link_to "編集", edit_user_path(@user) %>
-<%= link_to "このメンバーを消す", @user, method: :delete, data: { confirm: "You sure?" } %>
+
+<div class="float-end me-3">
+<%= link_to "編集", edit_user_path(@user),class: "me-3" %>
+<%= link_to "このメンバーを消す", @user, method: :delete, data: { confirm: "本当に消しますか？" },class: "delete-account ms-2" %>
+
+</div>
+
+
 
 <button class="my-5 btn  " style="background-color: black; margin-left: 100px;">
   <%= link_to "体温表を見る", group_path(Group.find_by(id: @user.group_id)),class: "mx-5", style: "color: white; text-decoration: none;" %>
