@@ -24,7 +24,10 @@ class UsersController < ApplicationController
     if !@users.find_by(user_params)
       @user = @group.users.new(user_params) 
       if  @user.save
-        @user.update_attribute(:position, @group.users.last.position+1)
+        if @users.count>0
+          @user.update_attribute(:position, @group.users.last.position+1)
+        else
+        end
         @user.temperatures.create(num: "未記入")
       else
         @users = @users.take(@users.count)
