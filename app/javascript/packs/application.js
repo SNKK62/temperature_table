@@ -15,6 +15,10 @@ require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
 require("jquery")
+//= require jquery3
+//= require rails-ujs
+//= require jquery-ui/widgets/sortable
+//= require jquery-ui/effects/effect-highlight
 
 var jQuery = require('jquery')
 global.$ = global.jQuery = jQuery;

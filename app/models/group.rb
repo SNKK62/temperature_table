@@ -1,8 +1,8 @@
 class Group < ApplicationRecord
     attr_accessor :remember_token
 
-    has_many :users, dependent: :destroy
-    validates :name, presence: true,uniqueness: true
+    has_many :users ,-> {order(position: :asc)}, dependent: :destroy
+    validates :name, presence: true,uniqueness: true, allow_nil: true
     
 
     has_secure_password

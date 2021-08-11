@@ -24,6 +24,7 @@ class UsersController < ApplicationController
     if !@users.find_by(user_params)
       @user = @group.users.new(user_params) 
       if  @user.save
+        @user.update_attribute(:position, @group.users.last.position+1)
         @user.temperatures.create(num: "未記入")
       else
         @users = @users.take(@users.count)
@@ -68,6 +69,21 @@ class UsersController < ApplicationController
     user = User.find(params[:id])
     destroy(bool: false,user: user)
     @users = current_group.users
+  end
+
+  def higher
+    @group = current_group
+    user = User.find(params[:id])
+    user.move_higher
+    @users = @group.users
+
+  end
+
+  def lower
+    @group = current_group
+    user = User.find(params[:id])
+    user.move_lower
+    @users = @group.users
   end
 
   private

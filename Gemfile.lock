@@ -61,6 +61,8 @@ GEM
       minitest (>= 5.1)
       tzinfo (~> 2.0)
       zeitwerk (~> 2.3)
+    acts_as_list (1.0.4)
+      activerecord (>= 4.2)
     addressable (2.8.0)
       public_suffix (>= 2.0.2, < 5.0)
     aliyun-sdk (0.8.0)
@@ -513,6 +515,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  acts_as_list
   bcrypt
   bootsnap (>= 1.4.4)
   bootstrap

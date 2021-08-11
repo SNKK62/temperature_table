@@ -1,6 +1,6 @@
 class GroupsController < ApplicationController
   before_action :logged_in_group, only: [:edit,:update,:destroy,:show]
-  before_action :correct_group, only:[:edit, :update,:show,:destroy]
+  before_action :correct_group, only:[:edit, :update,:show,:destroy, :update_temps]
   
 
   def index
@@ -14,7 +14,7 @@ class GroupsController < ApplicationController
 
   def show
     @group = Group.find(params[:id])
-    @users = @group.users 
+    @users = @group.users
     @user = User.new
   end
 
@@ -36,7 +36,9 @@ class GroupsController < ApplicationController
 
   def update_temps
     @group = Group.first
-    Temperature.add_temps
+    if @group.id == 1 && current_group.id == 1
+      Temperature.add_temps
+    end
     redirect_to group_path(@group)
   end
 
@@ -62,6 +64,14 @@ class GroupsController < ApplicationController
     flash[:success] = "アカウントを削除しました"
     redirect_to root_url
   end
+
+  # def sort
+  #   @group = Group.find(params[:id])
+  #   user = @group.users[params[:from].to_i]
+  #   user.insert_at(params[:to].to_i + 1)
+  #   @users = @group.users
+  #   head :ok
+  # end
 
   private
    def group_params

@@ -8,7 +8,7 @@ gem 'sprockets-rails'
 
 gem 'faker'
 gem 'whenever', require: false
-
+gem 'acts_as_list'
 gem 'rails-i18n'
 
 # gem 'carrierwave'

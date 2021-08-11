@@ -1,8 +1,11 @@
-<table class="text-center table table-bordered border-primary col-md-5  top-40 w-50 mx-auto my-5">
+<table class="text-center table   col-md-5  top-40 w-100  my-5"  >
 
-  <thead>
+  <thead >
     <tr>
-      <th scope="col　">名前</th>
+      <th scope="col　" >名前</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+      <th scope="col"></th>
       <th scope="col"></th>
       
     </tr>
@@ -11,8 +14,11 @@
     <% users.each do |user| %>
         <tr>
         <th scope="row"><%= user.name%></th>
-        <td><%= link_to "削除", del_user_path(user), method: :post,data: { confirm: "You sure?" }, style: "text-decoration: none; color: red;" ,remote: true%>
-</td>
+        <td><%= link_to "▲", higher_user_path(user),method: :post, style: "text-decoration: none; color: gray;" ,remote: true%></td>
+        <td><%= link_to "▼", lower_user_path(user), method: :post, style: "text-decoration: none; color: gray;", remote: true %></td>
+        <td><%= link_to "詳細", user_path(user),   style: "text-decoration: none; " %></td>
+        <td><%= link_to "削除", del_user_path(user), method: :post,data: { confirm: "このメンバーを消しますか？" }, style: "text-decoration: none; color: red;" ,remote: true%></td>
+
         </tr>
     <% end %>
     

@@ -8,7 +8,7 @@
 </div>
 
 <% if @group.id == 1 %>
-      <%= form_tag('/updatingall', method: :post ) do %>
+      <%= form_tag(update_temps_group_path(@group), method: :post ) do %>
       <div class="text-center">
         <%= submit_tag "データベースの追加", class: "btn btn-primary button float-center" ,id: "godfather"%>
       </div>
@@ -18,7 +18,7 @@
 
 <!-- Button trigger modal -->
 <div class="container  pt-3 my-5">
-<button type="button" class="mt-1 mb-5 btn btn-primary position-absolute top-1 start-50 translate-middle" data-bs-toggle="modal" data-bs-target="#exampleModal2" style="background-color: gray; width: 150px">
+<button type="button" class="mt-1 mb-5 btn btn-primary position-absolute top-1 start-50 translate-middle" data-bs-toggle="modal" data-bs-target="#exampleModal2" style="background-color: gray; width: 150px; border-color: gray;">
   メンバーを追加
 </button>
 </div>

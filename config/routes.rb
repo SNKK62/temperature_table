@@ -13,19 +13,26 @@ Rails.application.routes.draw do
   root 'groups#index'
   get '/signup', to: 'groups#new'
 
-  post '/updatingall', to: 'groups#update_temps'
+  # post 'updatingall', to: 'groups#update_temps'
   
   post "/", to: 'temperatures#update'
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
   
-  resources :groups 
-   
+  # patch 'groups/:id/sort', to: 'groups#sort'
+
+  resources :groups do
+    member do
+      post :update_temps
+    end
+  end
 
   resources :users  do
     member do
       post :del
+      post :higher
+      post :lower
     end
   end
   
