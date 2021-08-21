@@ -88,7 +88,10 @@ class GroupsController < ApplicationController
 
   def correct_group
     @group = Group.find(params[:id])
-    redirect_to(login_path) unless current_group?(@group)
+    unless current_group?(@group)
+      flash[:danger] = "アカウントが正しくありません"
+      redirect_to(login_path)
+    end
   end
 
   
