@@ -7,6 +7,7 @@ class Temperature < ApplicationRecord
     def self.add_temps
         @users = User.all
         @users.each do |user|
+           temp = user.temperatures.first
            if temp.num == "未記入"
             temp.destroy
           end
