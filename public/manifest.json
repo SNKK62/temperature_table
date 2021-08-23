@@ -1,1 +1,23 @@
+{
+  "name": "Body Temps",
+  "short_name": "BodyTemps",
+  "start_url": "/",
+  "icons": [
+  
+    {
+      "src": "/uV2IuPPFEa9zjfJ1629712022_1629712047.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/s0xC5S2ye5PwHCo1629712960_1629713098.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#000000",
+  "background_color": "#FFFFFF",
+  "display": "standalone",
+  "orientation": "portrait"
+}
 
