@@ -5,8 +5,8 @@
 
       <script>
         if ('serviceWorker' in navigator) {
-          navigator.serviceWorker.register('/serviceworker.js',{scope: './'}).then((reg) => {
-            console.log('Service worker registerd.',reg.scope);
+          navigator.serviceWorker.register('/serviceworker.js',{scope: '/'}).then((reg) => {
+            console.log('Service worker registerd.',reg);
           });
         }
       </script>
