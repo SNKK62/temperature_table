@@ -8,7 +8,7 @@ class GroupsController < ApplicationController
        
        redirect_to group_path(current_group) 
     else
-       redirect_to controller: :session, action: :new
+       redirect_to controller: :sessions, action: :new
     end
   end
 
